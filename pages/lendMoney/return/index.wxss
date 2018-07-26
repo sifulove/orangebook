@@ -1,0 +1,17 @@
+.page{padding-top:40px;}
+.content{margin:0 30rpx;position:relative;background:#fff;border-radius:3px;padding:20px;font-size:26rpx;color:#444;}
+.title{position:absolute;font-size:36rpx;line-height:60rpx;top:-36rpx;border-radius:3px;width:240rpx;left:50%;margin-left:-120rpx;color:red;letter-spacing:2px;background:#fff;}
+.secline{display:flex;align-items:center;justify-content:space-between;border-bottom:1rpx solid #f0f0f0;height:96rpx;font-size:30rpx;}
+.secline view{padding-right:10px;letter-spacing:2px;display:inline-block;width:174rpx;text-align:left;flex-shrink:0;}
+.secline input{text-align:right;}
+input:placeholder{color: #cbcbcb; font-weight: normal;}
+.btnContainer{position:fixed;bottom:50rpx;width:100%;text-align:center;}
+.btnContainer button{width:90%;}
+.msg{
+  text-align:justify;
+  padding:0 70rpx;
+  font-size:24rpx;
+  line-height:46rpx;
+  color:#808080;
+}
+.radio{display:block;}

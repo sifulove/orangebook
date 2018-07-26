@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/friend/index",
+    "pages/log/index",
+    "pages/lendMoney/accountBook/index",
+    "pages/lendMoney/return/index",
+    "pages/lendMoney/lend/index",
+    "pages/keepAccount/peraccount/index",
+    "pages/keepAccount/room/index",
+    "pages/keepAccount/root/index",
+    "pages/keepAccount/item/index",
+    "pages/aboutUs/homeroot/index",
+    "pages/usercenter/userMain/index",
+    "pages/usercenter/user/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "backgroundColor": "#fafafa",
+    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarTitleText": "小橙本",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+   "color":"#808080",
+   "selectedColor":"#23bd22",
+   "backgroundColor":"#fff",
+   "list": [
+     {
+     "iconPath":"image/all-1.png",
+     "selectedIconPath":"image/all-2.png",
+     "pagePath": "pages/index/index",
+     "text": "主页"
+     },
+     {
+     "pagePath": "pages/usercenter/userMain/index",
+     "iconPath":"image/bp-1.png",
+     "selectedIconPath":"image/bp-2.png",
+     "text": "个人中心"
+     },
+     {
+       "pagePath": "pages/friend/index",
+       "iconPath":"image/friend-1.png",
+       "selectedIconPath":"image/friend-2.png",
+       "text": "历史记录"
+     },
+     {
+       "iconPath":"image/ms-1.png",
+       "selectedIconPath":"image/ms-2.png",
+       "pagePath": "pages/log/index",
+       "text": "通知"
+       }
+    ]
+  }
+}

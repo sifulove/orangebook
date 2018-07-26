@@ -1,0 +1,12 @@
+<view class="page" style="width: 100%;height: 100%;">
+    <view class="content">
+        <view class="header">小橙本-记账</view>
+        <view class="imgContainer">
+            <image mode="widthFix" src="../../image/index_bg.png"></image>
+        </view>
+        <view class="msg">
+             欢迎使用小橙本记账，小橙本隶属于加根科技，集记账、提醒还款、个人信用于一身，致力于打造一个健康的，透明的熟人圈借账体系。
+        </view>
+    </view>
+    <userinfo bindsetinfo="setuserinfo"></userinfo>
+</view>

@@ -1,0 +1,34 @@
+<view class="page" style="width: 100%;min-height: 100%;">
+    <view class="header">
+      <image class="bg" src="/image/timg-4.jpg" mode="scaleToFill"></image>
+      <view class="name">小橙本</view>
+      <view class="welcome">一圈一点，胜似万语千言。一圈一点，情似海深...</view>
+    </view>
+    <view class="content">
+      <view class="tab" bindtap="navGo" data-url="/pages/lendMoney/lend/index">
+        <view class="paddingImg"><image class="icon" src="../../image/1.png" mode="scaleToFill"></image></view>
+        <text>发起借账</text>
+      </view>
+      <view class="tab" bindtap="navGo" data-url="/pages/lendMoney/accountBook/index">
+        <view class="paddingImg"><image class="icon" src="../../image/huan.png" mode="scaleToFill"></image></view>
+        <text>查账还款</text>
+      </view>
+      <view class="tab" bindtap="navGo" data-url="/pages/keepAccount/peraccount/index">
+        <view class="paddingImg"><image class="icon" src="../../image/book.png" mode="scaleToFill"></image></view>
+        <text>个人记账</text>
+      </view>
+      <view class="tab" bindtap="navGo" data-url="/pages/job/accountBook/index">
+        <view class="paddingImg"><image class="icon" src="../../image/fly.png" mode="scaleToFill"></image></view>
+        <text>发布兼职</text>
+      </view>
+      <view class="tab" bindtap="navGo" data-url="/pages/publicWelfare/accountBook/index">
+        <view class="paddingImg"><image class="icon" src="../../image/heart.png" mode="scaleToFill"></image></view>
+        <text>公益</text>
+      </view>
+      <view class="tab" bindtap="navGo" data-url="/pages/aboutUs/homeroot/index">
+        <view class="paddingImg"><image class="icon" src="../../image/about.png" mode="scaleToFill"></image></view>
+        <text>关于我们</text>
+      </view>
+    </view>
+    <userinfo bindsetinfo="setuserinfo"></userinfo>
+</view>

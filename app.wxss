@@ -1,0 +1,26 @@
+/**小程序样式初始化**/
+page{
+  height:100%;
+  overflow:hidden;
+  position:relative;
+  font-size:24rpx;
+  color:#808080;
+  backgroundColor:#fff;
+  text-align:center;
+}
+button:after{
+  border:none;
+}
+.imgContainer{
+ font-size:0;
+}
+.btn{
+ background:
+}
+.btn-small{
+
+}
+.space-30{display:inline-block;width:30rpx;}
+.space-10{display:inline-block;width:10rpx;}
+.more image{width:40rpx;height:40rpx;}
+.relative{position:relative;}

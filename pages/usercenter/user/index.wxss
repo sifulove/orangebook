@@ -1,0 +1,19 @@
+.page{
+
+}
+.header{
+font-size:36rpx;color:#444;padding:70rpx 0;
+}
+.msg{
+  text-align:justify;
+  padding:0 40rpx;
+  font-size:24rpx;
+  margin-top:20rpx;
+  line-height:46rpx;
+  color:#808080;
+}
+.section{justify-content:center;display:flex;align-items:center;padding:0 40rpx;font-size:28rpx;color:#444;}
+.btn-area{
+margin-top:400rpx;
+padding:20rpx;
+}

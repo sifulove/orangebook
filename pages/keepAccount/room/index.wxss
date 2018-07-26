@@ -1,0 +1,11 @@
+.page{padding-top:40rpx;}
+.content{margin:0 30rpx;position:relative;background:#fff;border-radius:3px;padding:40px 20px 20px;font-size:26rpx;color:#444;}
+.title{position:absolute;font-size:36rpx;line-height:90rpx;top:-10rpx;border-radius:3px;width:240rpx;left:50%;margin-left:-120rpx;color:#444;letter-spacing:2px;background:#fff;}
+.secline{display:flex;align-items:center;justify-content:space-between;border-bottom:1rpx solid #f0f0f0;height:96rpx;font-size:30rpx;}
+.secline view{padding-right:10px;letter-spacing:2px;display:inline-block;flex-shrink:0;text-align:left;}
+.secline input{text-align:right;}
+input:placeholder{color: #cbcbcb; font-weight: normal;}
+.btnContainer{position:fixed;bottom:50rpx;width:100%;text-align:center;}
+.btnContainer button{width:90%;}
+.secline-text{text-align:left;line-height:30rpx;font-size:26rpx;color:#444;padding:20rpx 0;border:1px solid #f0f0f0;border:none;}
+.wait{margin-top:170rpx;}

@@ -1,0 +1,19 @@
+<view class="page" style="width: 100%;height: 100%;">
+  <view class="content">
+    <view class="title">详细信息</view>
+    <view class="main">
+     <view class="secline" style="position:relative;"><view>账单编号：</view>
+        <i>{{id}}</i>
+     </view>
+     <view class="secline"><view>金额：</view><i></i></view>
+     <view class="secline"><view>收支：</view><i></i></view>
+     <view class="secline"><view>类别：</view><i></i></view>
+     <view class="secline"><view>时间：</view><i></i></view>
+     <view class="secline-text"><view>备注：</view></view>
+     <view class="secline-text" style="text-indent:60rpx;">222dd</view>
+    </view>
+ </view>
+ <view class="btnContainer">
+   <button type="warn" bindtap="back" class="btn">返回</button>
+ </view>
+</view>

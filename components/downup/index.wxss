@@ -1,0 +1,21 @@
+.ComDownup{
+position:fixed;bottom:0;width:100%;height:500rpx;background:rgba(255,255,255,0.95);
+}
+.ComDownupContent{
+display:flex;height:500rpx;
+}
+.ComDownupitem{
+width:33.33%;text-align:center;display:flex;flex-direction: column-reverse ;align-items:center;
+}
+.ComDownuptitle{color:#444;font-size:26rpx;}
+.ComDownupimg{width:80rpx;background:red;}
+.ComDownupitem:nth-of-type(2) .ComDownupimg{
+  background:green;
+}
+.ComDownupitem:nth-of-type(3) .ComDownupimg{
+  background:orange;
+}
+.ComDownupclose{
+position:absolute;
+top:0px;right:0;width:30px;height:30px;text-align:center;line-height:30px;background:rgba(255,255,255,0.95);
+}

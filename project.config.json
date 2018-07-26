@@ -1,0 +1,80 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.7.4",
+	"appid": "wx0102c669d86943fe",
+	"projectname": "orangebook",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "log",
+					"pathName": "pages/main/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "还款",
+					"pathName": "pages/lendMoney/return/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "借账",
+					"pathName": "pages/lendMoney/lend/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人记账",
+					"pathName": "pages/keepAccount/peraccount/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "房贷信息",
+					"pathName": "pages/keepAccount/room/index",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "账本树",
+					"pathName": "pages/keepAccount/root/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "账单详情",
+					"pathName": "pages/keepAccount/item/index",
+					"query": "id=1"
+				}
+			]
+		}
+	}
+}

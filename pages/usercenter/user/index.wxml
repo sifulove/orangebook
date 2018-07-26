@@ -1,0 +1,19 @@
+<view class="page" style="width: 100%;height: 100%;">
+    <view class="content">
+        <view class="header">对方姓名：小明</view>
+        <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
+            <view class="section">
+               <view class="section__title">还款金额：</view>
+               <input name="input" placeholder="请输入还款金额" />
+            </view>
+
+            <view class="btn-area">
+              <button type="primary" formType="submit">确认还款</button>
+            </view>
+
+        </form>
+        <view class="msg">
+             说明：提交还款单之后，如果是全额还款，等待对方确认收款之后，此笔账单即会变成已结清状态，如果是部分还款，则此笔账单的相关金额都会得到更新。
+        </view>
+    </view>
+</view>

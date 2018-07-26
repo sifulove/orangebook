@@ -1,0 +1,52 @@
+.tabContent{display:flex;flex-direction:row;border-top:1rpx solid #efefef;border-bottom:1rpx solid #efefef;justify-content: space-around;}
+.tabContent view{line-height:80rpx;color:#444;font-size:26rpx;}
+.tabContent .active{color:#fea401;border-bottom:1px solid #fea401;}
+swiper{height:100%; font-size:24rpx;}
+.items{margin:20rpx;border-radius:5px;padding:10rpx;min-height:100rpx;border:1px solid #e6e6e6;}
+.grousLists.data-v-50f4f619 {
+  height: 100%;
+}
+.grousLists scroll-view.data-v-50f4f619 {
+  height: 100%;
+}
+.grousList.data-v-50f4f619 {
+  display: flex;
+  padding: 38rpx 30rpx;
+  border-radius: 16rpx;
+  margin: 30rpx;
+  box-shadow: 0 0 20rpx #efefef;
+}
+.grousList ._img.data-v-50f4f619 {
+  width: 106rpx;
+  height: 106rpx;
+  border-radius: 10rpx;
+  margin-right: 34rpx;
+}
+.grousListMsg.data-v-50f4f619 {
+  color: #999;
+  flex: 1;
+  text-align:left;
+  position:relative;
+}
+.grousListMsg ._p.data-v-50f4f619:nth-child(1) {
+  position:absolute;right:0;top:-9px;
+}
+
+.grousListMsg ._p:text{
+  font-size: 24rpx;
+  color: #999;
+  float: right;
+}
+.grousListMsg ._p.data-v-50f4f619:nth-child(2) {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 50rpx;
+}
+.grousListMsg ._p:nth-child(2)>text.data-v-50f4f619 {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 30rpx;
+}
+.btn{
+position:absolute;right:0;bottom:0;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小橙本",
+  "usingComponents": {
+    "ComDownup": "../../../components/downup/index"
+  }
+}

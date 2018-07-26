@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小橙本",
+  "usingComponents": {
+    "userinfo": "../../components/userinfo/userinfo"
+  }
+}
