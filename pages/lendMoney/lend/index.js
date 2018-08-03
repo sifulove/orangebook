@@ -18,7 +18,7 @@ Page({
     }
     return {
       title: '借账申请函',
-      path: '/page/user?money='+this.data.money+'&tel='+tel+'&name='+name+'&date='+date+'&card='+card
+      path: '/pages/user?money='+this.data.money+'&tel='+tel+'&name='+name+'&date='+date+'&card='+card
     }
   },
   formSubmit: function(e) {

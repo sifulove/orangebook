@@ -1,19 +1,38 @@
 <view class="page" style="width: 100%;height: 100%;">
-    <view class="content">
-        <view class="header">对方姓名：小明</view>
-        <form bindsubmit="formSubmit" bindreset="formReset" report-submit="true">
-            <view class="section">
-               <view class="section__title">还款金额：</view>
-               <input name="input" placeholder="请输入还款金额" />
-            </view>
-
-            <view class="btn-area">
-              <button type="primary" formType="submit">确认还款</button>
-            </view>
-
-        </form>
-        <view class="msg">
-             说明：提交还款单之后，如果是全额还款，等待对方确认收款之后，此笔账单即会变成已结清状态，如果是部分还款，则此笔账单的相关金额都会得到更新。
-        </view>
+    <view class="user">
+      <image class="bg" src="/image/user-bg.jpg" style="width:100%;" mode="scaleToFill"></image>
+      <view class="header">
+        <view class="imgContainer"><image class="bg" src='https://wx.qlogo.cn/mmopen/vi_32/hdroubTAGBQaj4fhf9AXvxPyIcEHhk7mUAicCPyxNfJb0gzNOCjX3rYic8FV2JUaN81wlv1lfLLR1tsj5eTSJAibQ/132' style="width:100%;height:200rpx;" mode="scaleToFill"></image></view>
+        <view class="name">古星</view>
+      </view>
+      <view class="info">
+         <view>未还账款：<i class="lendMoney">￥100</i></view>
+         <view>个人信用：<i class="lendMoney">10</i></view>
+      </view>
     </view>
+    <view class="content">
+      <view class="_div data-v-50f4f619 grousList" wx:for="{{list1}}" wx:for-index="index" wx:key="{{index}}" wx:for-item="item">
+        <image src="{{item.imgUrl}}" class="_img data-v-50f4f619"></image>
+        <view class="_div data-v-50f4f619 grousListMsg">
+          <view class="_p data-v-50f4f619">
+            <text class="_text data-v-50f4f619" style="color:red">已超期</text>
+          </view>
+          <view class="_p data-v-50f4f619">债权人：
+            <text class="_text data-v-50f4f619">小明</text>
+          </view>
+          <view class="_p data-v-50f4f619">金额/已还：<text class="_text data-v-50f4f619">￥200/￥0</text></view>
+          <view class="_p data-v-50f4f619">借款日期：2018-10-11</view>
+          <view class="_p data-v-50f4f619">还款日期：2018-12-10</view>
+        </view>
+      </view>
+    </view>
+    <ComDownup>
+       <view slot="content" class="coMcontent">
+          <view class="secline"><view>借款金额：</view>1000</view>
+          <view class="secline"><view>归还日期：</view>2018-10-11</view>
+          <view class="btnContainer">
+            <button type="warn" class="btn" bindtap="submit">确认借款</button>
+          </view>
+       </view>
+    </ComDownup>
 </view>

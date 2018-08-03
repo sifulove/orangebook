@@ -1,0 +1,4 @@
+<view class="ComDownup" wx:if="{{ishow}}" animation="{{animationData}}">
+ <slot name="content"></slot>
+ <view class="ComDownupclose" bindtap="close" animation="{{closeData}}">X</view>
+</view>

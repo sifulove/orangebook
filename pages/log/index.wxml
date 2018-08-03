@@ -1,5 +1,0 @@
-<view class="page" style="width: 100%;height: 100%;">
-    <view class="content">
-    </view>
-    <userinfo bindsetinfo="setuserinfo"></userinfo>
-</view>
