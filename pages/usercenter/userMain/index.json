@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "小橙本",
   "usingComponents": {
-    "ComDownup": "../../../components/downupComponent/index"
+    "ComDownup": "../../../components/downupComponent/index",
+    "backHome": "../../../components/backHome/index",
+    "userinfo": "../../../components/userinfo/userinfo"
   }
 }

@@ -1,9 +1,8 @@
-
 const app=getApp()
 Component({
   data:{
     ishow:false,
-    text:"小确幸需要您的授权，才能正常使用哦。"
+    text:"小橙本需要您的授权，才能正常使用哦。"
   },
   properties: {
 
@@ -42,6 +41,7 @@ Component({
         this.setData({ishow:false})
         var data = {id:111111} // detail对象，提供给事件监听函数
         this.triggerEvent('setinfo', data)
+        app.login();
       }else{
         const self=this;
         this.setData({text:'很遗憾，因为授权失败，您将无法正常使用小程序。请到设置里（右上角 - 关于 - 右上角 - 设置）重新授权。'})

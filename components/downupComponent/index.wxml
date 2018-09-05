@@ -2,3 +2,4 @@
  <slot name="content"></slot>
  <view class="ComDownupclose" bindtap="close" animation="{{closeData}}">X</view>
 </view>
+ <image class="ComDownupup" bindtap="close" src="../../image/up.png"></image>

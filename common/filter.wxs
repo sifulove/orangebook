@@ -1,0 +1,19 @@
+module.exports={
+  toFix: function (value) {
+    var bb = Math.round(value*100)
+    var cc=bb/100;
+    var dd=cc.toFixed(2)
+    if(dd<=0.01){
+        dd=0.01
+    }
+    console.log(dd)
+    return dd;
+  },
+  clearTime:function(val){
+    var nval=val.substring(0,16);
+    return nval;
+  },
+  clearZero:function(val){
+    return val.split('.')[0];
+  }
+}

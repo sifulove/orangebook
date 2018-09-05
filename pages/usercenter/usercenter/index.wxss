@@ -1,0 +1,36 @@
+.user{position:relative;}
+.header{position:absolute;bottom:120rpx;width:200rpx;left:50%;margin-left:-100rpx;}
+.header .imgContainer{border-radius:50%;overflow:hidden;height:200rpx;}
+.header .name{margin-top:10rpx;color:#fff;font-size:30rpx;}
+.info{position:absolute;bottom:8rpx;display:flex;justify-content:space-around;width:100%;background:rgba(255,255,255,0.8);line-height:80rpx;height:80rpx;}
+.info i{color:red;}
+.grousLists.data-v-50f4f619 {
+  height: 100%;
+}
+.grousLists .data-v-50f4f619 {
+  height: 100%;
+}
+.grousList.data-v-50f4f619 {
+  display: flex;
+  padding: 38rpx 30rpx;
+  border-radius: 16rpx;
+  margin: 30rpx;
+  box-shadow: 0 0 20rpx #efefef;
+}
+.grousList ._img.data-v-50f4f619 {
+  width: 106rpx;
+  height: 106rpx;
+  border-radius: 10rpx;
+  margin-right: 34rpx;
+}
+.grousListMsg.data-v-50f4f619 {
+  color: #999;
+  flex: 1;
+  text-align:left;
+  position:relative;
+}
+.grousListMsg ._p.data-v-50f4f619:nth-child(1) {
+  position:absolute;right:0;top:-9px;
+}
+.btn{width:560rpx;margin-top:80rpx;}
+.coMcontent{margin:80rpx 100rpx 0;}

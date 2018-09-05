@@ -1,5 +1,5 @@
 const $ = require('../../../common/service.js');
-var app = getApp()
+const api=require('../../../common/api.js');
 Page({
   data: {
     type:['基本记账','工资收入','房贷','投资','新建自定义类别'],
@@ -9,9 +9,16 @@ Page({
     roomcard:'新建'
   },
   onLoad:function (option) {
+    this.getData()
   },
   onShow:function(option){
 
+  },
+  getData:function(){
+    const data={service:'getBillInfo',bookId:this.options.id}
+    api.post(data,'B').then(res=>{
+      this.setData({info:res})
+    })
   },
   back:function(){
     wx.navigateBack()

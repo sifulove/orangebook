@@ -1,17 +1,23 @@
 const $ = require('../../common/service.js');
-var app = getApp()
+const api = require('../../common/api.js');
 Page({
   data: {
-    list:[{msg:'小明已经同意您的借款申请，编号为：111111',src:''},{msg:'小明已经同意您的借款申请',src:''},{msg:'小明已经同意您的借款申请',src:''}]
+    list:'',
   },
   onLoad:function (option) {
-
+    this.getData()
   },
   onShow:function(option){
 
   },
+  getData:function(){
+    const data={service:'getLetterList'}
+    api.post(data,'B').then(res=>{
+       this.setData({list:res})
+    })
+  },
   navGo:function(e){
-    
+
   },
   lower:function(){
 

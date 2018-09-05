@@ -1,17 +1,18 @@
 <view class="ComDownup" wx:if="{{ishow}}" animation="{{animationData}}">
  <view class="ComDownupContent">
    <view class="ComDownupitem">
-      <view class="ComDownupimg" style="height:{{msg[3]>0?350:msg[1]/msg[2]*350}}rpx"></view>
-      <view class="ComDownuptitle">总收入:{{msg[1]}}</view>
+      <view class="ComDownupimg" style="height:{{msg.leftover>0?350:msg.income/msg.expenditure*350}}rpx"></view>
+      <view class="ComDownuptitle">总收入:{{msg.income}}</view>
    </view>
    <view class="ComDownupitem">
-      <view class="ComDownupimg" style="height:{{msg[3]>0?msg[2]/msg[1]*350:350}}rpx"></view>
-      <view class="ComDownuptitle">总支出:{{msg[2]}}</view>
+      <view class="ComDownupimg" style="height:{{msg.leftover>=0?msg.expenditure/msg.income*350:350}}rpx"></view>
+      <view class="ComDownuptitle">总支出:{{msg.expenditure}}</view>
    </view>
    <view class="ComDownupitem">
-      <view class="ComDownupimg" style="height:{{msg[3]>0?msg[3]/msg[1]*350:msg[3]/msg[2]*350}}rpx"></view>
-      <view class="ComDownuptitle">净收入:{{msg[3]}}</view>
+      <view class="ComDownupimg" style="height:{{msg.leftover>=0?msg.leftover/msg.income*350:msg.leftover/msg.expenditure*-350}}rpx"></view>
+      <view class="ComDownuptitle">净收入:{{msg.leftover}}</view>
    </view>
  </view>
- <view class="ComDownupclose" bindtap="close" animation="{{closeData}}">X</view>
+ <image class="ComDownupclose" bindtap="close" src="../../image/close.png"></image>
 </view>
+ <image class="ComDownupup" bindtap="close" src="../../image/up.png"></image>

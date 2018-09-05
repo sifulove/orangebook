@@ -1,0 +1,6 @@
+<view class="page" style="width: 100%;min-height: 100%;">
+<button bindtap="bindButtonTap">录制视频</button>
+<input bindtap="setVal" data-key="jiepai" value="{{jiepai}}" type="digit" placeholder="请输入节拍"></input>
+<input bindtap="setVal" data-key="speed" value="{{speed}}" type="digit" placeholder="请输入速度"></input>
+<button bindtap="play">播放节拍器</button>
+</view>

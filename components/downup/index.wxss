@@ -1,5 +1,5 @@
 .ComDownup{
-position:fixed;bottom:0;width:100%;height:500rpx;background:rgba(255,255,255,0.95);
+position:fixed;bottom:0;width:100%;height:500rpx;background:rgba(255,255,255,1);z-index:10;
 }
 .ComDownupContent{
 display:flex;height:500rpx;
@@ -7,15 +7,18 @@ display:flex;height:500rpx;
 .ComDownupitem{
 width:33.33%;text-align:center;display:flex;flex-direction: column-reverse ;align-items:center;
 }
-.ComDownuptitle{color:#444;font-size:26rpx;}
-.ComDownupimg{width:80rpx;background:red;}
+.ComDownuptitle{color:#444;font-size:26rpx;line-height:60rpx;}
+.ComDownupimg{width:80rpx;background:#FF9B0D;border-top-left-radius:10px;border-top-right-radius:10px;}
 .ComDownupitem:nth-of-type(2) .ComDownupimg{
-  background:green;
+  background:#A1F189;
 }
 .ComDownupitem:nth-of-type(3) .ComDownupimg{
-  background:orange;
+  background:red;
 }
 .ComDownupclose{
 position:absolute;
-top:0px;right:0;width:30px;height:30px;text-align:center;line-height:30px;background:rgba(255,255,255,0.95);
+top:15rpx;right:15rpx;width:30rpx;height:30rpx;
+}
+.ComDownupup{
+position:fixed;bottom:0;width:44rpx;height:44rpx;right:20rpx;
 }

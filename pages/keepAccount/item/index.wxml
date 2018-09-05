@@ -3,14 +3,14 @@
     <view class="title">详细信息</view>
     <view class="main">
      <view class="secline" style="position:relative;"><view>账单编号：</view>
-        <i>{{id}}</i>
+        <i>101003320{{info.id}}</i>
      </view>
-     <view class="secline"><view>金额：</view><i></i></view>
-     <view class="secline"><view>收支：</view><i></i></view>
-     <view class="secline"><view>类别：</view><i></i></view>
-     <view class="secline"><view>时间：</view><i></i></view>
+     <view class="secline"><view>金额：</view><i>{{info.amount}}</i></view>
+     <view class="secline"><view>收支：</view><i>{{info.pid==5?'支出':'收入'}}</i></view>
+     <view class="secline"><view>类别：</view><i>{{info.book_type_name}}</i></view>
+     <view class="secline"><view>时间：</view><i>{{info.book_at}}</i></view>
      <view class="secline-text"><view>备注：</view></view>
-     <view class="secline-text" style="text-indent:60rpx;">222dd</view>
+     <view class="secline-text" style="text-indent:60rpx;">{{info.remarks}}</view>
     </view>
  </view>
  <view class="btnContainer">

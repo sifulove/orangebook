@@ -1,0 +1,30 @@
+<view class="page" style="width: 100%;height: 100%;">
+    <view class="user">
+      <image class="bg" src="/image/usercenter.png" style="width:100%;" mode="scaleToFill"></image>
+      <view class="header">
+        <view class="imgContainer"><image class="bg" src='{{user.img}}' style="width:100%;height:200rpx;" mode="scaleToFill"></image></view>
+        <view class="name">{{user.name}}</view>
+      </view>
+      <view class="info">
+         <view>未还账款：<i class="lendMoney">￥100</i></view>
+         <view>个人积分：<i class="lendMoney">{{user.score}}</i></view>
+      </view>
+    </view>
+    <view class="content">
+      <view class="_div data-v-50f4f619 grousList" wx:for="{{loanList}}" wx:for-index="index" wx:key="{{index}}" wx:for-item="item">
+        <image src="{{item.imgUrl}}" class="_img data-v-50f4f619"></image>
+        <view class="_div data-v-50f4f619 grousListMsg">
+          <view class="_p data-v-50f4f619">
+            <text class="_text data-v-50f4f619" style="color:red">已超期</text>
+          </view>
+          <view class="_p data-v-50f4f619">债权人：
+            <text class="_text data-v-50f4f619">小明</text>
+          </view>
+          <view class="_p data-v-50f4f619">金额/已还：<text class="_text data-v-50f4f619">￥200/￥0</text></view>
+          <view class="_p data-v-50f4f619">借款日期：2018-10-11</view>
+          <view class="_p data-v-50f4f619">还款日期：2018-12-10</view>
+        </view>
+      </view>
+      <view wx:if="{{loanList.length==0}}" class="noMsg">信用良好，没有超期借款记录。</view>
+    </view>
+</view>

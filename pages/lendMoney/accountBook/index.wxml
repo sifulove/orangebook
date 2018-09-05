@@ -1,3 +1,4 @@
+<wxs src="../../../common/filter.wxs" module="tool" />
 <view class="page" style="width: 100%;height: 100%;">
     <view class="tabContent">
        <view bindtap="tabchange" class="{{[current == 0 ? 'active' : '']}}" data-id="0">借款负债</view>
@@ -6,44 +7,48 @@
     <swiper current="{{current}}" duration="100">
         <swiper-item>
           <scroll-view scroll-y="true" class="_scroll-view" bindscrolltolower="downrefresh">
-              <view class="_div data-v-50f4f619 grousList" wx:for="{{list1}}" wx:for-index="index" wx:for-item="item">
-                <image src="{{item.imgUrl}}" class="_img data-v-50f4f619"></image>
+              <view class="_div data-v-50f4f619 grousList" wx:for="{{list1}}" wx:key="index">
+                <image src="{{item.header_img||'../../../image/head.png'}}" class="_img data-v-50f4f619"></image>
                 <view class="_div data-v-50f4f619 grousListMsg">
                   <view class="_p data-v-50f4f619">
-                    <text wx:if="{{item.status==0}}" class="_text data-v-50f4f619">未超期</text>
-                    <text wx:elif="{{item.status==1}}" class="_text data-v-50f4f619" style="color:red">已超期</text>
+                    <text wx:if="{{item.status==1}}" class="_text data-v-50f4f619">借款中</text>
+                    <text wx:elif="{{item.status==2}}" class="_text data-v-50f4f619">已出借</text>
+                    <text wx:elif="{{item.status==3}}" class="_text data-v-50f4f619">还款中</text>
+                    <text wx:elif="{{item.status==5}}" class="_text data-v-50f4f619" style="color:red">已超期</text>
                     <text wx:else class="_text data-v-50f4f619" style="color:red">已结清</text>
                   </view>
                   <view class="_p data-v-50f4f619">债权人：
-                    <text class="_text data-v-50f4f619">小明</text>
+                    <text class="_text data-v-50f4f619">{{item.lender_name}}</text>
                   </view>
-                  <view class="_p data-v-50f4f619">金额/已还：<text class="_text data-v-50f4f619">￥200/￥0</text></view>
-                  <view class="_p data-v-50f4f619">借款日期：2018-10-11</view>
-                  <view class="_p data-v-50f4f619">还款日期：2018-12-10</view>
-                  <button size="mini" data-id="{item.id}" bindtap="return" type="warn" wx-if="item.status!=2" class="btn">还款</button>
+                  <view class="_p data-v-50f4f619">金额/已还：<text class="_text data-v-50f4f619">￥{{item.loan_amount}}/￥{{item.repaid}}</text></view>
+                  <view class="_p data-v-50f4f619">借款日期：{{tool.clearTime(item.created_at)}}</view>
+                  <view class="_p data-v-50f4f619">还款日期：{{tool.clearTime(item.repayment_time)}}</view>
+                  <button size="mini" data-id="{{item.id}}" data-amount="{{item.loan_amount-item.repaid}}" data-name="{{item.lender_name}}" bindtap="return" type="warn" wx:if="{{item.status!=4&&item.status!=10&&item.status!=1}}" class="btn">还款</button>
                 </view>
               </view>
+              <view wx:if="{{list1.length==0}}" class="noMsg">没有借款记录</view>
           </scroll-view>
         </swiper-item>
         <swiper-item>
           <scroll-view scroll-y="true" class="_scroll-view" bindscrolltolower="downrefresh">
-          <view class="_div data-v-50f4f619 grousList" wx:for="{{list1}}" wx:for-index="index" wx:for-item="item">
-            <image src="{{item.imgUrl}}" class="_img data-v-50f4f619"></image>
+          <view class="_div data-v-50f4f619 grousList" wx:for="{{list2}}" wx:key="index">
+            <image src="{{item.header_img||'../../../image/head.png'}}" class="_img data-v-50f4f619"></image>
             <view class="_div data-v-50f4f619 grousListMsg">
               <view class="_p data-v-50f4f619">
-                <text wx:if="{{item.status==0}}" class="_text data-v-50f4f619">未超期</text>
-                <text wx:elif="{{item.status==1}}" class="_text data-v-50f4f619" style="color:red">已超期</text>
+                <text wx:if="{{item.status==2||tem.status==3}}" class="_text data-v-50f4f619">未超期</text>
+                <text wx:elif="{{item.status==5}}" class="_text data-v-50f4f619" style="color:red">已超期</text>
                 <text wx:else class="_text data-v-50f4f619" style="color:red">已结清</text>
               </view>
               <view class="_p data-v-50f4f619">借款人：
-                <text class="_text data-v-50f4f619">小明</text>
+                <text class="_text data-v-50f4f619">{{item.borrower_name}}</text>
               </view>
-              <view class="_p data-v-50f4f619">金额/已还：<text class="_text data-v-50f4f619">￥200/￥0</text></view>
-              <view class="_p data-v-50f4f619">借款日期：2018-10-11</view>
-              <view class="_p data-v-50f4f619">还款日期：2018-12-10</view>
-              <button wx-if="item.status!=2" data-id="{{item.id}}" bindtap="hurryup" size="mini" type="warn" class="btn">催还</button>
+              <view class="_p data-v-50f4f619">金额/已还：<text class="_text data-v-50f4f619">￥{{item.loan_amount}}/￥{{item.repaid}}</text></view>
+              <view class="_p data-v-50f4f619">借款日期：{{tool.clearTime(item.created_at)}}</view>
+              <view class="_p data-v-50f4f619">还款日期：{{tool.clearTime(item.repayment_time)}}</view>
+              <button data-status="{{item.status}}" data-id="{{item.id}}" bindtap="hurryup" size="mini" type="warn" class="btn">提醒</button>
             </view>
           </view>
+          <view wx:if="{{list2.length==0}}" class="noMsg">没有借出记录</view>
           </scroll-view>
         </swiper-item>
     </swiper>

@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "小橙本"
+  "navigationBarTitleText": "小橙本",
+  "usingComponents": {
+    "shareCom": "../../../components/shareCom/index"
+  }
 }

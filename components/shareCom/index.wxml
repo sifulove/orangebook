@@ -1,0 +1,15 @@
+<view class="userinfo">
+  <view class="infoContainer">
+     <view class="container">
+        <view class="title">借记申请</view>
+        <view class="msg">
+            <view>请点击发送按钮转发给朋友</view>
+            <view>朋友同意后即可完成该笔借款记账。</view>
+        </view>
+        <view class="btn-container">
+            <button class="hmBtn sure" open-type="share">转发</button>
+            <button class="hmBtn cancel" bindtap="cancel">取消</button>
+        </view>
+     </view>
+  </view>
+</view>

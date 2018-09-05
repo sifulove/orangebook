@@ -1,0 +1,3 @@
+<view class="backHomeCom">
+  <image bindtap="backHome" src="../../image/backhome.png"></image>
+</view>

@@ -1,40 +1,36 @@
+<wxs src="../../../common/filter.wxs" module="tool" />
 <view class="page" style="width: 100%;height: 100%;">
   <view class="tree" bindtap="navGo" data-url="/pages/keepAccount/root/index">
     <view class="centerLine">
-       <view class="list income">
+       <view style="left:{{60+index*150}}rpx" class="list {{item.pid==6?'income':'expenditure'}}" wx:for="{{bill}}" wx:key="{{index}}">
          <view class="line"></view>
-         <view class="txt">850</view>
-       </view>
-       <view class="list expenditure">
-         <view class="line"></view>
-         <view class="txt">1</view>
+         <view class="txt">{{item.pid==6?'+':'-'}}{{tool.clearZero(item.amount)}}</view>
        </view>
     </view>
   </view>
   <view class="content">
-    <view class="title">快速记账</view>
     <view class="secline"><view>款项类型：</view>
-        <picker bindchange="chooseType" value="{{index}}" range="{{type}}">
+        <picker bindchange="chooseType" value="{{index}}" range-key="name" range="{{type}}">
           <i class="picker">
-            当前选择：{{type[index]}}
+          {{type[index].name}}<b class="arrow"></b>
           </i>
         </picker>
     </view>
     <view class="main" wx:if="{{index==0}}">
-     <view class="secline noborder"><i>{{incomeType>1?"收入":"支出"}}<switch style="margin-left:10px;margin-right:-8px;"  checked bindchange="switch1Change"/></i><i wx:if="{{incomeType>1}}">{{items2[itemchoose].name}}</i><i wx:else>{{items1[itemchoose].name}}</i></view>
+     <view class="secline noborder"><i>{{incomeType>1?"收入":"支出"}}<switch style="margin-left:10px;margin-right:-8px;"  checked bindchange="switch1Change"/></i><i wx:if="{{incomeType>1}}">{{items2[itemchoose].book_name}}</i><i wx:else>{{items1[itemchoose].book_name}}</i></view>
      <view class="icon">
          <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
            <view wx:if="{{incomeType==1}}" class="scroll-container">
-             <view bindtap="itemchoose" data-index="{{index}}" wx:for="{{items1}}" wx:key="{{index}}" class="item"><i class="imgContainer"><image mode="widthFix" src="{{item.src}}"></image></i><view>{{item.name}}</view></view>
+             <view bindtap="itemchoose" data-index="{{index}}" wx:for="{{items1}}" wx:key="{{index}}" class="item"><i class="imgContainer"><image mode="widthFix" src="../../../image/{{item.icon}}"></image></i><view>{{item.book_name}}</view></view>
              <view class="item" style="width:0px;padding:1px;background:#e6e6e6;"></view>
            </view>
            <view wx:else class="scroll-container">
-             <view bindtap="itemchoose" data-index="{{index}}" wx:for="{{items2}}" wx:key="{{index}}" class="item"><i class="imgContainer"><image mode="widthFix" src="{{item.src}}"></image></i><view>{{item.name}}</view></view>
+             <view bindtap="itemchoose" data-index="{{index}}" wx:for="{{items2}}" wx:key="{{index}}" class="item"><i class="imgContainer"><image mode="widthFix" src="../../../image/{{item.icon}}"></image></i><view>{{item.book_name}}</view></view>
              <view class="item" style="width:0px;padding:1px;background:#e6e6e6;"></view>
            </view>
          </scroll-view>
      </view>
-     <view class="secline"><view>款项金额：</view><input bindtap="setVal" data-key="money" value="{{money}}" type="digit" placeholder="请输入借款金额"></input></view>
+     <view class="secline"><view>款项金额：</view><input bindinput="setVal" data-key="amount" value="{{amount}}" type="digit" placeholder="请输入借款金额"></input></view>
      <view class="secline"><view>划拨时间：</view>
       <i style="display:flex;">
         <picker mode="date" value="{{date}}" bindchange="bindDateChange">
@@ -42,19 +38,20 @@
             {{date}}
           </i>
         </picker>
-        <i class="space-10"></i>
+        <!--<i class="space-10"></i>
         <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
           <i class="picker">
             {{time}}
           </i>
-        </picker>
+        </picker>-->
       </i>
      </view>
-     <view class="secline-text"><textarea bindblur="bindTextAreaBlur" auto-height placeholder="请输入备注信息" /></view>
+     <view class="secline-text"><textarea bindinput="setVal" data-key="remarks" auto-height placeholder="请输入备注信息" /></view>
     </view>
 
     <view class="main" wx:if="{{index==1}}">
-     <view class="secline"><view>公司名称：</view><input bindtap="setVal" data-key="money" value="{{money}}" type="digit" placeholder="请输入公司名称"></input></view>
+     <view class="wait">~~程序猿正在加紧开发中，敬请期待~~</view>
+     <!--<view class="secline"><view>公司名称：</view><input bindtap="setVal" data-key="money" value="{{money}}" type="digit" placeholder="请输入公司名称"></input></view>
      <view class="secline"><view>款项金额：</view><input bindtap="setVal" data-key="money" value="{{money}}" type="digit" placeholder="请输入借款金额"></input></view>
      <view class="secline"><view>工资月份：</view>
          <picker mode="date" fields="month" value="{{date-salary}}" bindchange="bindDateChange">
@@ -79,6 +76,7 @@
       </i>
      </view>
      <view class="secline-text"><textarea bindblur="bindTextAreaBlur" auto-height placeholder="请输入备注信息" /></view>
+      -->
     </view>
 
     <view class="main" wx:if="{{index==2}}">
@@ -115,6 +113,6 @@
   </view>
 
   <view class="btnContainer">
-    <button type="warn" class="btn">确认记账</button>
+    <button bindtap="createLog"  class="btn">确认记账</button>
   </view>
 </view>

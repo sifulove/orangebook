@@ -1,0 +1,30 @@
+.infoContainer{
+  height:100%;
+  width:100%;
+  position:fixed;
+  z-index:100;
+  top:0;
+  display:flex;
+  background:rgba(0,0,0,0.5);
+  justify-content:center;
+  align-items:center;
+}
+.container{
+  width:calc(100% - 120px);
+  background:#fff;
+  padding:20rpx;
+  border-radius:3px;
+}
+.userinfo text{
+ font-size:24rpx;color:#808080;
+ padding:20rpx;text-align:center;
+ display:block;
+}
+.btn-container{display:flex;}
+.btn-container button{color:#fff;padding:0 40rpx;height:80rpx;line-height:80rpx;font-size:34rpx;}
+.sure{background:red;}
+.cancel{background:#808080;}
+.msg{
+   padding:40rpx 0;
+}
+.title{font-size:36rpx;color:#444;}

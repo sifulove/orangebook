@@ -20,35 +20,37 @@ $.setInputval=function(e){
 $.login=function(fn){
   wx.login({
     success: function success(res) {
-      console.log(res.code);
-      var code = res.code;
-      wx.getUserInfo({
-        withCredentials: true,
-        success: function success(res) {
-          console.log(res);
-          const config = {
-            code: code,
-            data: res.encryptedData,
-            iv: res.iv
-          };
-          api.post('getUserInfo', config).then(function (res) {
-            console.log(res);
-            wx.setStorageSync('token', res.data.id);
-            if (res.code == 1) {
-                  fn&&fn(res)
-            }
-            if (res.code == 4000) {
-              wx.navigateTo({
-                url: '/pages/bind-phone/main'
+      const code=res.code
+      api.loginPost({service:'permit',code:code}).then(function (res) {
+        const skey=res.data.sessKey;
+        if (res.code == 0) {
+          wx.getUserInfo({
+            withCredentials: true,
+            success: function success(res) {
+              const config = {
+                service:'smallLogin',
+                skey: skey,
+                data: res.encryptedData,
+                iv: res.iv
+              };
+              api.loginPost(config).then(function (res) {
+                if (res.code == 0) {
+                   api.post({service:'getInfo',stoken:res.data.stoken},'U').then(res=>{
+
+                   })
+                   fn&&fn(res.data)
+                }
+              }).catch(function (err) {
+                console.log(err)
               });
+            },
+            fail: function fail(err) {
+              console.log(err);
             }
-          }).catch(function (err) {
-            console.log(err);
           });
-        },
-        fail: function fail(err) {
-          console.log(err);
         }
+      }).catch(function (err) {
+        console.log(err);
       });
     }
   })

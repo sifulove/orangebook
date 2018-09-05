@@ -8,10 +8,10 @@
 .name{
   color:#444;font-weight:900;font-size:32rpx;margin-top:20rpx;letter-spacing:2px;margin-bottom:6rpx;
 }
-.welcome{color:#81817f;font-size:20rpx;margin-bottom:0px;}
+.welcome{color:#494949;font-size:20rpx;margin-bottom:0px;}
 .content{display:flex;flex-flow: row wrap;}
 .tab{
   width:33.33%;text-align:center;color:#444;
 }
-.tab .paddingImg{width:110rpx;border-radius:50%;height:110rpx;margin:20px auto 4px;overflow:hidden;}
+.tab .paddingImg{width:110rpx;border-radius:50%;height:110rpx;margin:40px auto 4px;overflow:hidden;}
 .paddingImg image{width:100%;height:100%;}

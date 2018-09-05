@@ -7,6 +7,7 @@ page{
   color:#808080;
   backgroundColor:#fff;
   text-align:center;
+  font-family:PingFangSC;
 }
 button:after{
   border:none;
@@ -15,15 +16,14 @@ button:after{
  font-size:0;
 }
 .btn{
- background:
+ background:#FF9B0D;color:#fff;
 }
-.btn-small{
-
-}
+.arrow{width:20rpx;height:20rpx;border-top:1px solid #999;border-left:1px solid #999;display:inline-block;transform:rotateZ(225deg);margin-left:10rpx;position:relative;top:-3rpx;}
 .secline{display:flex;align-items:center;justify-content:space-between;border-bottom:1rpx solid #f0f0f0;height:96rpx;font-size:30rpx;}
-.secline view{padding-right:10px;letter-spacing:2px;display:inline-block;width:175rpx;flex-shrink:0;}
+.secline view{padding-right:10px;letter-spacing:2px;display:inline-block;width:175rpx;flex-shrink:0;text-align:left;}
 .secline input{text-align:right;}
 .space-30{display:inline-block;width:30rpx;}
 .space-10{display:inline-block;width:10rpx;}
 .more image{width:40rpx;height:40rpx;}
 .relative{position:relative;}
+.noMsg{padding:240rpx 0;text-align:center;}

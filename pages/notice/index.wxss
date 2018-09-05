@@ -1,3 +1,3 @@
-.imgContainer image{width:60rpx;height:60rpx;}
-.item{display:flex;justify-content:flex-start;align-items:center;font-size:28rpx;margin:0 30rpx 40rpx;border-radius:3px;background:#e6e6e6;overflow:hidden;}
+.imgContainer image{width:49rpx;height:42rpx;margin:0 20rpx;}
+.item{display:flex;justify-content:flex-start;align-items:center;font-size:24rpx;color:#ACACAC;margin:0 30rpx 40rpx;border-radius:3px;background:#EEEEEE;overflow:hidden;padding:20rpx 0;}
 scroll-view{padding-top:40rpx;}

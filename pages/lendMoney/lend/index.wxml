@@ -2,7 +2,7 @@
   <view class="content">
     <view class="title">账目信息</view>
     <view class="main">
-     <view class="secline"><view>借款金额：</view><input bindtap="setVal" data-key="money" value="{{money}}" type="digit" placeholder="请输入借款金额"></input></view>
+     <view class="secline"><view>借款金额：</view><input bindinput="setVal" data-key="loanAmount" value="{{loanAmount}}" type="number" placeholder="请输入借款金额"></input></view>
      <view class="secline"><view>还款时间：</view>
       <picker mode="date" value="{{date}}" start="{{start}}" bindchange="bindDateChange">
         <i class="picker">
@@ -10,12 +10,13 @@
         </i>
       </picker>
      </view>
-     <view class="secline"><view>联系电话：</view><input bindtap="setVal" data-key="tel" value="{{tel}}" type="digit" placeholder="请输入联系电话"></input></view>
-     <view class="secline"><view>姓<i class="space-30"></i><i class="space-30"></i>名：</view><input bindtap="setVal" data-key="name" value="{{name}}" type="digit" placeholder="请输入联系电话"></input></view>
-     <view class="secline"><view>身份证号：</view><input bindtap="setVal" data-key="tel" value="{{card}}" type="digit" placeholder="请输入联系电话"></input></view>
+     <view class="secline"><view>联系电话：</view><input bindinput="setVal" data-key="tel" value="{{tel}}" type="number" placeholder="请输入联系电话"></input></view>
+     <view class="secline"><view>姓<i class="space-30"></i><i class="space-30"></i>名：</view><input bindinput="setVal" data-key="name" value="{{name}}" placeholder="请输入真是姓名"></input></view>
+     <view class="secline"><view>身份证号：</view><input bindinput="setVal" data-key="card" value="{{card}}" type="number" placeholder="请输入身份证号"></input></view>
     </view>
   </view>
   <view class="btnContainer">
-    <button open-type="share" type="warn" class="btn">发起借账</button>
+    <button class="btn" bindtap="submit">生成借记单</button>
   </view>
+  <shareCom wx:if="{{ishow}}" bindhide="hide"></shareCom>
 </view>

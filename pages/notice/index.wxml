@@ -2,7 +2,7 @@
   <scroll-view scroll-y style="height: 100%;" bindscrolltolower="lower">
     <view class="item" wx:for="{{list}}" wx:key="{{index}}" bindtap="navGo" data-url="{{item.src}}">
        <view class="imgContainer"><image mode="widthFill" src="../../image/notice.png"></image></view>
-       <view class="msg">{{item.msg}}</view>
+       <view class="msg">{{item.content}}</view>
     </view>
   </scroll-view>
 </view>

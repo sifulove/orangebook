@@ -12,6 +12,9 @@ Page({
   },
   setuserinfo:function(e){
     console.log(e)
+  },
+  waiting:function(){
+    wx.showToast({title:'程序猿正在努力开发中，敬请期待。',icon:'none'})
   }
 
 })
